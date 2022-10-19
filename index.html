@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Forms-Mecanico</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <center>
+        <div class="contenedor">
+            <h2>Datos del Dueño</h2>
+            <form role="form" onsubmit="Enviar(event);">
+                <div class="formCar">
+                    <input type="text" name="Fnombre" id="Fnombre" placeholder="Nombre Completo" required>
+                </div>
+                <div class="formCar">
+                    <input type="text" name="Fdui" id="Fdui" placeholder="Número de DUI" required >
+                </div>
+                <div class="formCar">
+                    <input type="text" name="Fnit" id="Fnit" placeholder="Número de NIT" required >
+                </div>
+                <h2>Información del Automóvil</h2>
+                <div class="formCar">
+                    <select>
+                        <option>Seleccionar Marca </option>
+                        <option>BMW</option>
+                        <option>Mercedes-Benz</option>
+                        <option>Fird</option>
+                        <option>Mitsubishi</option>
+                        <option>Honda</option>
+                        <option>Mazda</option>
+                        <option>KIA</option>
+                        <option>Nissan</option>
+                        <option>FIAT</option>
+                        <option>Toyota</option>
+                    </select>
+                </div>
+                <div class="formCar">
+                    <input type="text" name="Cmol" id="Cmol" placeholder="Modelo del Automóvil" required>
+                </div>
+                <div class="formCar">
+                    <input type="text" name="Cfec" id="Cfec" placeholder="Año" required>
+                </div>
+                <div class="formCar">
+                    <input type="text" name="Cacol" id="Cacol" placeholder="Color del Automóvil" required>
+                </div>
+                <div class="formCar">
+                    <input type="text" name="Cplac" id="Cplac" placeholder="Placa del Automóvil" required>
+                </div>
+                <div class="formCar">
+                    <button type="submit">Enviar</button>
+                </div><br><br>
+            </form>
+            <h2>Información</h2>
+            <div id="output">
+            </div>
+            <br><br><br><br><br>
+
+        </div>
+
+<script type="text/javascript">
+const Enviar= e=>{
+let formData = {
+Fnombre: document.getElementById('Fnombre').value, 
+Fdui: document.getElementById('Fdui').value, 
+Fnit: document.getElementById('Fnit').value, 
+Cmol: document.getElementById('Cmol').value
+Cfec: document.getElementById('Cfec').value
+Cacol: document.getElementById('Cacol').value
+Cplac: document.getElementById('Cplac').value
+localStorage.setItem('formData', (formData));
+
+dispData();
+e.preventDefault();
+function dispData(){
+if(local Storage.getItem('formData')){
+let {Fni, Fdui, Fnit, Cmol, Cfec, Cacol, Cplac)=JSON.parse(local Storage.getItem('formData')); 
+var output = document.getElementById('output');
+output.innerHTML=`
+<table>
+ <tbody>
+ <tr>
+         <td>Nombre Completo</td> 
+          <td>$[Fnombre]</td>
+</tr>`;
+        } 
+ }
+dispData():
+</script>
+
+ <br><br>
+        <footer>
+            <div class="fondo">
+                <br><br>
+                <p>@2022 - Todos los derechos reservados</p>
+                <p>Creadores:</p>
+                <p>Angel Gabriel Alfaro Arabia | Kevin Humberto Madrid Patzan</p><br><br>
+            </div>
+        </footer>
+    </center>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
